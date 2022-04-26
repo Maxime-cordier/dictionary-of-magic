@@ -1,13 +1,42 @@
 <template>
   <div id="app">
-    <div id='nav'>
-      <router-link to='/'>Home</router-link>
-      <router-link to='/gestionnaire'>Gestionnaire</router-link>
-      <router-link to='/recherche'>Recherche</router-link>
-      <router-link to='/statistiques'>Statistiques</router-link>
-    </div>
-    
-    <img src="./assets/Book.png">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+         <!-- <img src="./assets/Book.png"> -->
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            <router-link to='/'>Home</router-link>
+          </a>
+
+          <a class="navbar-item">
+            <router-link to='/gestionnaire'>Gestionnaire</router-link>
+          </a>
+
+          <div class="navbar-item">
+            <a class="navbar-link">
+              <router-link to='/recherche'>Recherche</router-link>
+            </a>
+          </div>
+
+          <div class="navbar-item">
+            <a class="navbar-link">
+              <router-link to='/statistiques'>Statistiques</router-link>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>  
     <hr>
     <router-view/>
   </div>
@@ -39,8 +68,7 @@ a {
   padding : 5%;
 }
 img {
-  position:absolute;
-  top:0px;
-  left:160px;
+  margin-right: auto;
+  display: block;
 }
 </style>
