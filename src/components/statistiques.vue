@@ -1,6 +1,18 @@
 <template>
   <div id="stat">
-    <p>Statistiques</p>
+    <p>Nombre de livres : {{statLivre.length}}</p>
+    <p>Nombre de sort total : {{DATA.length}}</p>
+    
+    <p> Nombre de sorts par livre : </p>
+    <ul>
+      <li v-for="(nombre, sort) in nombreSort" :key="sort">
+                {{ sort }} : {{ nombre }}
+              </li>
+    </ul>
+  
+  
+  
+  
   </div>
 </template>
 
@@ -11,7 +23,38 @@ export default {
     return {
     
     }
-  }
+  },
+  props : ["DATA"],
+
+  computed : {
+    statLivre() {
+    let tabLivres = [];
+      this.DATA.forEach(sort => {
+        if (!tabLivres.includes(sort[0])) {
+          tabLivres.push(sort[0])
+        }
+      });
+      return tabLivres;
+    },
+
+    nombreSort(){
+      let tabLivre = {};
+
+      this.DATA.forEach(sort => {
+        if (tabLivre[sort[0]] != undefined) {
+          tabLivre[sort[0]] = tabLivre[sort[0]] + 1;
+        } else {
+          tabLivre[sort[0]] = 1;
+        }
+      });
+
+      return tabLivre;
+    },
+
+
+  },
+  
+
 }
 </script>
 

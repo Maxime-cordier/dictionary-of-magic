@@ -4,6 +4,7 @@ import Home from '@/components/Home.vue'
 import gestionnaire from '@/components/gestionnaire.vue'
 import research from '@/components/research.vue'
 import stats from '@/components/statistiques.vue'
+import DATA from '../../data.min.js'
 
 Vue.use(Router)
 
@@ -22,12 +23,14 @@ export default new Router({
     {
       path: '/recherche',
       name : 'research',
-      component: research
+      component: research,
+      props : { DATA : DATA}
     },
     {
       path: '/statistiques',
       name : 'stats',
-      component: stats
+      component: stats,
+      props : { DATA : DATA}
     }
   ]
 })
