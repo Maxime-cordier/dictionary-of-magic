@@ -14,12 +14,16 @@
 </template>
 
 <script>
+
 export default {
   name: 'App',
   data () {
     return {
       costOfApples : 6,
     }
+  },
+  mounted(){
+    //console.log(DATA); //Ca debeug
   }
 }
 </script>

@@ -1,6 +1,16 @@
 <template>
   <div id="rech">
     <p>Recherche</p>
+
+    <input v-model="cherche" type="search"/>
+    <div v-for="item in DATA_filtre" :key="item[1] + item[2]">
+      <p>Nom : {{ item[1] }}</p>
+      <p>Type : {{ item[2] }}</p>
+      <br>
+
+    </div>
+
+
   </div>
 </template>
 
@@ -9,7 +19,14 @@ export default {
   name: 'research',
   data () {
     return {
+      cherche: "",
+    }
     
+  },
+  props : ["DATA"],
+  computed : {
+    DATA_filtre(){
+      return this.DATA.filter((uneDATA) => uneDATA[1].toLowerCase().includes(this.cherche.toLowerCase()))
     }
   }
 }
