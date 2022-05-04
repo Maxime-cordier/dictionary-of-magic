@@ -1,8 +1,10 @@
 <template>
-  <div class="hello">
-    <h1>Bibliot'ENSSAT</h1>
-    <p>Bienvenue à la bibilothèque MAGIQUE de l'ENSSAT! </p>
-    <p>Ici vous pouvez rechercher un sort de magie, regarder les statisques, ou gérer les sorts</p>
+  <div class="container">
+    <div>
+      <h1 class="titre-page title is-2">Bibliot'ENSSAT</h1>
+      <p class="p-home">Bienvenue à la bibilothèque MAGIQUE de l'ENSSAT! </p>
+      <p class="p-home">Ici vous pouvez rechercher un sort de magie, regarder les statisques, ou gérer les sorts</p>
+    </div>
   </div>
 </template>
 
@@ -19,18 +21,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>

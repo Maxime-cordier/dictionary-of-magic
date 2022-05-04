@@ -1,6 +1,6 @@
 <template>
   <div id="gestionnaire">
-    <p>Gestionnaire</p>
+    <p class="titre-page title is-2">Gestionnaire</p>
   </div>
 </template>
 

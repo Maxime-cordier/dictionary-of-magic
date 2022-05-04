@@ -1,19 +1,29 @@
 <template>
-  <div id="stat">
-    <p>Nombre de livres : {{statLivre.length}}</p>
-    <p>Nombre de sort total : {{DATA.length}}</p>
-    
-    <p> Nombre de sorts par livre : </p>
-    <ul>
-      <li v-for="(nombre, sort) in nombreSort" :key="sort">
-                {{ sort }} : {{ nombre }}
-              </li>
-    </ul>
-  
-  
-  
-  
-  </div>
+  <div id="stat" class="container">
+    <div class="row">
+      <p class="titre-page title is-2">Statistiques</p>
+        
+        <div class="card">
+            <p class="card-header-title">Nombre de livres : {{statLivre.length}}</p>
+        </div>
+        
+        <div class="card">
+          <p class="card-header-title">Nombre de sort total : {{DATA.length}}</p>
+        </div>
+        
+        <div class="card">
+            <p class="card-header-title">Nombre de sorts par livre :</p>
+
+            <div class="card-content">
+              <div class="content has-text-left">
+                <p v-for="(nombre, sort) in nombreSort" :key="sort">
+                  {{ sort }} : {{ nombre }}
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
 </template>
 
 <script>
