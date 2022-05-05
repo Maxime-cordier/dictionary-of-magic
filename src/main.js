@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import('../css/style.css')
-import('/home/lou/Documents/S2/Techno Web/lou_and_maxime_project/node_modules/bulma/css/bulma.css')
+import('../css/bulma.css')
 
 Vue.config.productionTip = false
 Vue.prototype.$name = 'nom'

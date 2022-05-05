@@ -27,6 +27,9 @@
 </template>
 
 <script>
+
+import statLivre from "../function/listeLivre";
+
 export default {
   name: 'stats',
   data () {
@@ -37,16 +40,11 @@ export default {
   props : ["DATA"],
 
   computed : {
-    statLivre() {
-    let tabLivres = [];
-      this.DATA.forEach(sort => {
-        if (!tabLivres.includes(sort[0])) {
-          tabLivres.push(sort[0])
-        }
-      });
-      return tabLivres;
-    },
 
+    statLivre(){
+      return statLivre(this.DATA);
+    },
+    
     nombreSort(){
       let tabLivre = {};
 

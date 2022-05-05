@@ -21,7 +21,6 @@ export default new Router({
       component: gestionnaire,
       props : {
         DATA : DATA,
-        data2 : stats.computed["statLivre"],
       }
     },
     {

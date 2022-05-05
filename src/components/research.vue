@@ -5,7 +5,7 @@
       <!--Recherche-->
       <div class="field is-grouped">
         <p class="control ">
-          <input v-model="cherche" :placeholder="'Entrez' + [[ name ]] + 'du sort'" type="input" class="input-recherche" >   
+          <input v-model="cherche" :placeholder="'Nom du sort'" type="input" class="input-recherche" >   
         </p>
       </div>
 
@@ -25,6 +25,8 @@
           <div class="card-content">
             <div class="content">
               <p>Type : {{ item[2] }}</p>
+              <br>
+              <p>Livre : {{ item[0] }}</p>
               <br>
               <p class="join">{{ item[3].join(", ") }}</p>
               <br>
@@ -54,7 +56,14 @@ export default {
   props : ["DATA"],
   computed : {
     DATA_filtre(){
-      return this.DATA.filter((uneDATA) => uneDATA[1].toLowerCase().includes(this.cherche.toLowerCase()))
+      let mesSorts = this.DATA;
+      let filtre = localStorage.getItem('filtreLivre') || 'data';
+
+      if (filtre != "data"){
+        mesSorts = mesSorts.filter(sort => sort[0] == filtre);
+      }
+
+      return mesSorts.filter((uneDATA) => uneDATA[1].toLowerCase().includes(this.cherche.toLowerCase()))
     }
   }
 }
