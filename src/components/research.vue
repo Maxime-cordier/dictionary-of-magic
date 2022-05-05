@@ -2,16 +2,10 @@
   <div id="rech" class="container">
     <p class="titre-page title is-2">Recherche</p>
     <div class="row">
-
       <!--Recherche-->
       <div class="field is-grouped">
         <p class="control ">
-          <input v-model="cherche" :placeholder="'Entrez' + [[ name ]] + 'du sort'" type="input" class="input-recherche" >  
-        </p>
-        <p class="control">
-          <a class="button">
-            Recherche
-          </a>
+          <input v-model="cherche" :placeholder="'Entrez' + [[ name ]] + 'du sort'" type="input" class="input-recherche" >   
         </p>
       </div>
 
@@ -49,7 +43,6 @@
 </template>
 
 <script>
-import { prototype } from 'vue/types/umd'
 export default {
   name: 'research',
   data () {
@@ -72,8 +65,4 @@ export default {
       margin-bottom: 20px;
   }
 
-  .button {
-    background: #ffbc6b;
-    color: rgb(229, 230, 231);
-  }
 </style>

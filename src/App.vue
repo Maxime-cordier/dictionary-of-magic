@@ -39,7 +39,6 @@ export default {
   name: "App",
   data() {
     return {
-      costOfApples: 6,
     };
   },
   mounted() {

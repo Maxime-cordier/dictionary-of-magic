@@ -18,7 +18,11 @@ export default new Router({
     {
       path: '/gestionnaire',
       name : 'gestionnaire',
-      component: gestionnaire
+      component: gestionnaire,
+      props : {
+        DATA : DATA,
+        data2 : stats.computed["statLivre"],
+      }
     },
     {
       path: '/recherche',
