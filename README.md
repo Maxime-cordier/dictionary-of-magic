@@ -1,6 +1,13 @@
-# lou_and_maxime_project
+# Bibliot'ENSSAT
 
-> projet js
+## Authors
+
+Lou Le Gall and Maxime Cordier
+
+## Description
+Welcome to the MAGIC library of ENSSAT!
+Here, you can search for a magic spell, view the statistics, or manage the spells.
+
 
 ## Build Setup
 
