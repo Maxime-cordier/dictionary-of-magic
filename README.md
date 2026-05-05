@@ -8,6 +8,13 @@ Lou Le Gall and Maxime Cordier
 Welcome to the MAGIC library of ENSSAT!
 Here, you can search for a magic spell, view the statistics, or manage the spells.
 
+## Technologies
+- Langages : `JavaScript`, `HTML`, `CSS`
+- Framework : `Vue.js` (version 2)
+- Routage : `vue-router`
+- UI / styles : `Bootstrap`, `Bulma`
+- Build : `Webpack` (version 3), `Babel`, `PostCSS`
+- Package manager : `npm`
 
 ## Build Setup
 
